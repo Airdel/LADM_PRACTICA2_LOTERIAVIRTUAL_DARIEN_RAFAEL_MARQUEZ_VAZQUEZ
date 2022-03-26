@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:text="17401326 - Baraja "
+        android:id="@+id/txtTitulo"
+        />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/carta1"
+        android:id="@+id/imageCarta"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtTitulo"/>
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageCarta"
+        android:text="Comenzar Juego" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡LOTERÍA!"
+        android:layout_below="@id/btnIniciar"
+        android:id="@+id/btnLoteria"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar cartas restantes"
+        android:layout_below="@id/btnLoteria"
+        android:id="@+id/btnVerificar"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar partida"
+        android:layout_below="@id/btnVerificar"
+        android:visibility="invisible"
+        android:id="@+id/btnReiniciar"/>
+</RelativeLayout>
