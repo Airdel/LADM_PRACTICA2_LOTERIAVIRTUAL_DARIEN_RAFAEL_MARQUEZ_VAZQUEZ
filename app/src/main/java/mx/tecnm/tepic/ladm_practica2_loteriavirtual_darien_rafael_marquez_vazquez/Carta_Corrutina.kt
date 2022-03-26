@@ -21,7 +21,6 @@ class Carta_Corrutina(imagenEnviada : ImageView, etiquetaEnviada : TextView, est
     }
     fun revisarCartas(){
         revision=scope.launch(EmptyCoroutineContext,CoroutineStart.LAZY){
-            delay(2000)
             try {
                 while(cartas2.size !=0) {
                     if (cartas2.size != 0) {
@@ -36,6 +35,7 @@ class Carta_Corrutina(imagenEnviada : ImageView, etiquetaEnviada : TextView, est
 
                         }
                     }
+                    delay(2000)
                 }
                     if (cartas2.size == 0) {
                         imagenEnviadaGlobal.setImageResource(R.drawable.carta1)
@@ -44,7 +44,7 @@ class Carta_Corrutina(imagenEnviada : ImageView, etiquetaEnviada : TextView, est
                     }
 
 
-                Thread.sleep(2000)
+
             }catch (Exceptionnnnnn : Exception){
                 etiquetaEnviadaGlobal.text = "${Exceptionnnnnn.message}"
             }

@@ -90,6 +90,19 @@ class MainActivity : AppCompatActivity() {
                 txtTitulo.text = "${e.message}"
             }
         }
+
+        btnReiniciar.setOnClickListener {
+            try{
+                revision = Carta_Corrutina(imageCarta, txtTitulo, this)
+                revision.cancelarRevision()
+                cartas2 = cartas1
+                cartaSonido2 = cartaSonido1
+                imageCarta.setImageResource(R.drawable.carta1)
+                txtTitulo.text = "17401326 - Lotería"
+            }catch (e:Exception){
+                txtTitulo.text = "${e.message}"
+            }
+        }
     }//fin de Oncreate
 }//fin de clase
 
